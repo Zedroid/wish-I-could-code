@@ -1,0 +1,1 @@
+javascript:(function(){document.querySelectorAll('label[data-testid="collapsible-user-message-toggle"]').forEach(el=>{if(el.innerText.includes("Show more")){el.click();}});})();
