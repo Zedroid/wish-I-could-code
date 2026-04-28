@@ -1,0 +1,24 @@
+expand reddit comments
+javascript:(function(){u=$('.selftext.collapsed'),i=0;function f(){if(u[i]){$(u[i]).click();i+=1}};setInterval(f,1000);})();void 0
+Unddit
+javascript:window.open(location.href.replace(/:\/\/([\w-]+.)?(reddit\.com\/r|reveddit\.com\/v)\//i,%20%22://undelete.pullpush.io/r/%22),%20%22_blank%22)
+expand all gemini
+javascript:(function(){document.querySelectorAll('button').forEach(btn=>{const icon=btn.querySelector('mat-icon[fonticon="expand_more"]');if(icon){btn.click();}});})();
+Removing Citation Numbers for Read Aloud - Google Gemini
+javascript:(function(){document.querySelectorAll('sources-carousel-inline, source-inline-chip, .source-inline-chip-container').forEach(el => {el.remove();});})();
+Clicking ChatGPT "Show More" Button - Google Gemini
+javascript:(function(){document.querySelectorAll('label[data-testid="collapsible-user-message-toggle"]').forEach(el=>{if(el.innerText.includes("Show more")){el.click();}});})();
+Google Calendar - Tasks
+https://calendar.google.com/calendar/u/0/r/tasks?pli=1
+dark mode text editor
+data:text/html, <body contenteditable style="background-color:black;color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;margin:0;font-family:sans-serif;text-align:center;">
+YouTube playlist
+javascript:window.location='https://www.youtube.com/playlist?list=UU%27+ytInitialData.metadata.channelMetadataRenderer.externalId.substring(2)
+prehacks hub
+
+Enes Up Next - YouTube
+https://www.youtube.com/playlist?list=UU9P6gGHlXQ3ANvmgb0601_Q
+d_2_undergraduate_course_completions_fy2025.pdf
+https://www.athabascau.ca/university-secretariat/_documents/accreditation/d_2_undergraduate_course_completions_fy2025.pdf
+
+https://survey.stackoverflow.co/
