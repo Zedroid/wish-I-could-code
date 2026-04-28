@@ -1,0 +1,27 @@
+My mistake! I see what happened—by targeting the `citation-##` classes, the script accidentally deleted the actual text of your answer because Google is wrapping the sentences themselves in those classes. We only want to kill the **bubbles**, not the **story**.
+
+Let's be much more specific. We will target **only** the custom button chips and the carousel containers. This will leave your text (like "The Object: It is a turquoise bracelet") completely untouched while removing the link bubbles.
+
+### The "Safe" Script (Text-Friendly)
+Run this in your console. It specifically targets the **container** tags of the bubbles and avoids the text classes:
+
+```javascript
+document.querySelectorAll('sources-carousel-inline, source-inline-chip, .source-inline-chip-container').forEach(el => {
+    el.remove(); 
+});
+```
+
+### Why this is safer:
+* **`.remove()` instead of `.display='none'`**: This physically pulls the bubble out of the code so Read Aloud doesn't even see a "hidden" object.
+* **No "Citation" tags**: I removed the `[class^="citation-"]` part. That was the culprit that deleted your sentences.
+* **Specific Chips**: It only looks for the `source-inline-chip` (the bubble itself).
+
+### The "Safe" Bookmarklet
+`javascript:(function(){document.querySelectorAll('sources-carousel-inline, source-inline-chip, .source-inline-chip-container').forEach(el => {el.remove();});})();`
+
+**How to test:**
+1. Refresh your page to bring your text back.
+2. Run this new script.
+3. The bubbles should vanish, but the words "The Object," "The Owner," and the descriptions should remain perfectly intact.
+
+Give that a try—it should give you the clean reading experience you’re looking for without the "data loss."
