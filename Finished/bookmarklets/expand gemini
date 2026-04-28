@@ -1,0 +1,10 @@
+Bookmarklet For Gemini
+If you are like me and save your Gemini chats as logs to later review and utilize it is always good to get as much info as you can in the log. This JavaScript bookmarklet works by adding a bookmark to your bookmarks bar and making the URL as follows.
+
+javascript:(function(){document.querySelectorAll('button').forEach(btn=>{const icon=btn.querySelector('mat-icon[fonticon="expand_more"]');if(icon){btn.click();}});})();
+
+USE: Go to Gemini chat and keep scrolling up until the entire chat is loaded. Press the new bookmarklet you just saved to the bookmark bar. Wait a second or two (possibly more pending chat size) and all of your chat bubbles as well as Gemini's thinking gets fully expanded for the entire chat. Then control+A to select all text on screen and control+v into a document application that handles large amounts of text well like notepad++.
+
+I hope this helps you in saving your logs. :-D
+
+https://www.reddit.com/r/Artificial2Sentience/comments/1oohxxj/bookmarklet_for_gemini/ 
