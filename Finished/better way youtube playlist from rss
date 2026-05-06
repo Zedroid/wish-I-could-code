@@ -1,0 +1,20 @@
+better way youtube playlist
+
+https://www.newskeeper.io/tools/youtube-rss?query=https%3A%2F%2Fwww.youtube.com%2F%40thehomeofarchitecture
+
+https://news.ycombinator.com/item?id=48030964
+
+I see people are doing scripts or other things to remove shorts from their feeds, but there is a simpler solution.
+Take your RSS URL of a channel, e.g.:
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCxSGC9B...
+
+Replace the `channel_id` with `playlist_id` and replace `UC` with `UULF`. This prefix will only list normal videos:
+
+https://www.youtube.com/feeds/videos.xml?playlist_id=UULFxSG...
+
+	
+BagelsOverBread 7 minutes ago | parent | next [–]
+
+(a little bit of self-promo but) If anyone is looking for an RSS reader that splits out shorts from videos automatically, I made my open source reader Serial in part for exactly this
+https://serial.tube/
