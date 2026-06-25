@@ -4,7 +4,7 @@
 
 ## 📤 Export Info
 - **Title**: Expand Table Without Scrolling
-- **Time**: 6/24/2026, 2:37:00 PM
+- **Time**: 6/24/2026, 6:24:45 PM
 - **Source**: Gemini
 - **URL**: https://gemini.google.com/app/1313636f392e85b6
 
@@ -12,7 +12,7 @@
 
 ## 🙋 User
 
-![Uploaded image preview](https://lh3.googleusercontent.com/gg/AEir0wLuEML1I3snlJLHVeZ5XXGZP2cwRwg0fj9sOz0ayX_zOHJXIVHwDSABNlyZ3VgmS7zJg24A8QaNBZvKF8GSRW72-NvNs4ov8I3R-Yf10GlpScfXGvRc0NMiKWWVmxQtREVbAEPzK_NKIKLKg9D-blkU-Uoy3uRy30nnQ6nzp883QVRRTC1JKU4KQRnZEdTz5AkncTIyM6b-UWdUap1jagPhwQV-q-oDsocy0LG4hH1mm0K0j6bB8JipzdZ53YeYwuf-wsiMhgY5X444kyqlLmlDWEpVeYkH_HU)
+![Uploaded image preview](https://lh3.googleusercontent.com/gg/AEir0wJlMetWmHktm2I6LS8h1APIYPae-YdDS92NjlpBrcCTX8H3vmSsaahaW13bF5O0LA-WE3qIg6ZhwcyoZTMXJBVLaYGGSc5XhyZE4vr964lYrpGtzPcYLROhemUa8QCgxyZ5hy4spudKCLDopJkGYVUjXvD1AwnKwXdvbvRLTITxToYm0-wUh5Rg-TrnARB_r0DOeNx4wRkG4ke-E_xab4SjT4vF1ObWqRr4Fqqyau1hWiR78jG4eFRtGdbuuaLRyvNs2_mgncnGLaJQL82IXOsBaI4FNcVBhog)
 
 how do i expand with out scroll
 
@@ -124,5 +124,36 @@ console.log("Table expansion style successfully injected via TrustedHTML.");
 
 - **Bypasses Security Flags:** If the site uses a strict content security policy, wrapping the string payload in `policy.createHTML()` satisfies the browser's requirement for an explicit contract.
 - **Resets Width Constraints:** It targets the common generic naming conventions (`scroll`, `wrapper`, `container`) used by modern frameworks to clip content layouts.
+
+---
+
+## 🙋 User
+
+can you turn this to a javascript bookmakerlet
+
+---
+
+## 🤖 Gemini
+
+Here is the code configured as a compact, URL-encoded JavaScript bookmarklet. It handles the `TrustedHTML` security policy check and injects the layout-expanding CSS instantly when clicked.
+
+### The Bookmarklet Code
+Copy the entire block of code below:
+
+```javascript
+javascript:(function(){const p=window.trustedTypes?.createPolicy('bkl',{createHTML:s=>s})||{createHTML:s=>s};const s=document.createElement('div');s.innerHTML=p.createHTML('<style>div[class*="scroll"],div[class*="wrapper"],div[class*="container"]{overflow:visible!important;max-width:none!important;width:auto!important;}table,.v-table,[role="table"]{width:max-content!important;min-width:100%!important;}td,th,[role="cell"],[role="columnheader"]{white-space:nowrap!important;padding:0 16px!important;}</style>');document.head.appendChild(s.firstElementChild);})();
+```
+
+### How to Install and Use It
+
+1. **Create the Bookmark:**
+  - Press `Ctrl + D` (Windows) or `Cmd + D` (Mac) to bookmark this current page.
+  - Click **More...** or **Edit** to modify the bookmark details.
+2. **Edit the Details:**
+  - **Name:** Change it to something recognizable, like `解 Expand Table` or `Fix Width`.
+  - **URL / URL Field:** Paste the code block from above directly into this box (replacing the current web address).
+  - Save it to your **Bookmarks Bar** for quick access.
+3. **Run It:**
+  - When you encounter a page with a clipped table like the one in your image, simply click the bookmarklet in your browser bar. The layout constraints will drop immediately, rendering the hidden text.
 
 ---
